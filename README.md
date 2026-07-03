@@ -26,14 +26,14 @@ A `UserProfile` is a dictionary with any of:
 ### Algorithm Recipe
 
 For each song, `score_song()` adds up:
-- **+2.0 points** if the song's genre matches the user's favorite genre
-- **+1.0 point** if the song's mood matches the user's favorite mood
+- **+1.5 points** if the song's genre matches the user's favorite genre
+- **+1.5 points** if the song's mood matches the user's favorite mood
 - **Up to 2.0 points** for energy closeness — the closer the song's energy is to the user's `target_energy`, the more points it earns (a direct match earns the full 2.0, and points shrink smoothly as the gap grows), *not* just "higher energy = better"
 - **Up to 1.0 point each** for danceability and acousticness closeness, using the same closeness formula, if the user profile specifies those targets
 
 We use both a **Scoring Rule** and a **Ranking Rule** because they solve two different problems: the Scoring Rule judges *one song in isolation* ("how well does this song match this person?"), while the Ranking Rule takes the *entire scored catalog* and decides the order to present it in (highest score first, top `k` only). You need the first to produce a number, and the second to turn a pile of numbers into an actual ordered list a user can act on.
 
-**Expected bias:** genre match is worth more than any single other factor, so the system likely over-prioritizes genre — a song with the exact right genre but a mismatched mood can still outrank a song with the perfect mood and energy in a different genre. See `model_card.md` for what we actually observed.
+**Expected bias:** even with genre and mood weighted equally, genre match still tends to dominate in practice because it's a binary yes/no bonus, while energy/danceability/acousticness closeness scores shrink gradually — see model_card.md for what we actually observed — a song with the exact right genre but a mismatched mood can still outrank a song with the perfect mood and energy in a different genre. See `model_card.md` for what we actually observed.
 
 ## Data Flow
 
@@ -54,7 +54,7 @@ Output: sort all (song, score, reasons) by score, descending
 ```
 music-recommender/
 ├── data/
-│   └── songs.csv          # 20-song catalog
+│   └── songs.csv          # 35-song catalog
 ├── src/
 │   ├── recommender.py     # load_songs, score_song, recommend_songs
 │   └── main.py            # CLI: runs several test profiles
