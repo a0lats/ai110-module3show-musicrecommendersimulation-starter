@@ -71,6 +71,78 @@ python -m src.main
 ## Sample Recommendation Output
 
 ```
+Loaded songs: 35
+
+=== Default Profile (Afrobeats/Energetic) ===
+Profile: {'favorite_genre': 'afrobeats', 'favorite_mood': 'energetic', 'target_energy': 0.75, 'target_danceability': 0.8}
+------------------------------------------------------------
+1. Longtime by Wizkid ft. Skepta  |  score: 5.95
+   reasons: genre match (+1.5), mood match (+1.5), energy closeness (+2.0), danceability closeness (+0.95)
+2. CTMF by Davido  |  score: 5.92
+   reasons: genre match (+1.5), mood match (+1.5), energy closeness (+1.94), danceability closeness (+0.98)
+3. Aje by Davido  |  score: 5.86
+   reasons: genre match (+1.5), mood match (+1.5), energy closeness (+1.94), danceability closeness (+0.92)
+4. City Boys by Burna Boy  |  score: 5.85
+   reasons: genre match (+1.5), mood match (+1.5), energy closeness (+1.9), danceability closeness (+0.95)
+5. Fall by Davido  |  score: 4.36
+   reasons: genre match (+1.5), energy closeness (+1.86), danceability closeness (+1.0)
+
+=== High-Energy Pop ===
+Profile: {'favorite_genre': 'afrobeats', 'favorite_mood': 'energetic', 'target_energy': 0.9, 'target_danceability': 0.8}
+------------------------------------------------------------
+1. City Boys by Burna Boy  |  score: 5.75
+   reasons: genre match (+1.5), mood match (+1.5), energy closeness (+1.8), danceability closeness (+0.95)
+2. Aje by Davido  |  score: 5.68
+   reasons: genre match (+1.5), mood match (+1.5), energy closeness (+1.76), danceability closeness (+0.92)
+3. Longtime by Wizkid ft. Skepta  |  score: 5.65
+   reasons: genre match (+1.5), mood match (+1.5), energy closeness (+1.7), danceability closeness (+0.95)
+4. CTMF by Davido  |  score: 5.62
+   reasons: genre match (+1.5), mood match (+1.5), energy closeness (+1.64), danceability closeness (+0.98)
+5. Gym Hero by Pump Nation  |  score: 4.4
+   reasons: mood match (+1.5), energy closeness (+2.0), danceability closeness (+0.9)
+
+=== Chill Lofi ===
+Profile: {'favorite_genre': 'lofi', 'favorite_mood': 'chill', 'target_energy': 0.2, 'target_acousticness': 0.8}
+------------------------------------------------------------
+1. Quiet Room by Soft Static  |  score: 5.95
+   reasons: genre match (+1.5), mood match (+1.5), energy closeness (+2.0), acousticness closeness (+0.95)
+2. Rainy Window by Soft Static  |  score: 4.3
+   reasons: genre match (+1.5), energy closeness (+1.9), acousticness closeness (+0.9)
+3. Velvet Room by Slow Jazz Society  |  score: 4.3
+   reasons: mood match (+1.5), energy closeness (+1.9), acousticness closeness (+0.9)
+4. Morning Light by Echo Hall  |  score: 4.3
+   reasons: mood match (+1.5), energy closeness (+1.9), acousticness closeness (+0.9)
+5. Just Friends (Sunny) by Musiq Soulchild  |  score: 4.05
+   reasons: mood match (+1.5), energy closeness (+1.8), acousticness closeness (+0.75)
+
+=== Deep Intense Rock ===
+Profile: {'favorite_genre': 'rock', 'favorite_mood': 'intense', 'target_energy': 0.85}
+------------------------------------------------------------
+1. Midnight Drive by Neon Static  |  score: 5.0
+   reasons: genre match (+1.5), mood match (+1.5), energy closeness (+2.0)
+2. City Lights by Neon Static  |  score: 3.4
+   reasons: genre match (+1.5), energy closeness (+1.9)
+3. Broken Mirror by Static Fury  |  score: 3.24
+   reasons: mood match (+1.5), energy closeness (+1.74)
+4. Rooftop Summer by Voltage Kids  |  score: 1.94
+   reasons: energy closeness (+1.94)
+5. Gym Hero by Pump Nation  |  score: 1.9
+   reasons: energy closeness (+1.9)
+
+=== Adversarial: Conflicted Metal/Sad ===
+Profile: {'favorite_genre': 'metal', 'favorite_mood': 'sad', 'target_energy': 0.9}
+------------------------------------------------------------
+1. Iron Fist by Static Fury  |  score: 3.4
+   reasons: genre match (+1.5), energy closeness (+1.9)
+2. Broken Mirror by Static Fury  |  score: 3.34
+   reasons: genre match (+1.5), energy closeness (+1.84)
+3. Late Night Drive by Velvet Groove  |  score: 2.4
+   reasons: mood match (+1.5), energy closeness (+0.9)
+4. Heartbreak Hotel by Lonely Strings  |  score: 2.3
+   reasons: mood match (+1.5), energy closeness (+0.8)
+5. Blue Note Blues by Slow Jazz Society  |  score: 2.3
+   reasons: mood match (+1.5), energy closeness (+0.8)
+```
 Loaded songs: 20
 
 === Default Profile (Pop/Happy) ===
